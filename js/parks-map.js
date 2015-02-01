@@ -14,8 +14,6 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  map.data.loadGeoJson('data/parks.geojson')
-
   var style1 = {
     fillColor: '#5cb85c',
     fillOpacity: 0.3,
@@ -30,7 +28,10 @@ function initialize() {
       infowindow.setPosition(event.feature.getGeometry().get());
       infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
       infowindow.open(map);
-  }); 
+  });
+
+  map.data.loadGeoJson('data/parks.geojson')
+
   map.data.setStyle(style1);
 
   var defaultBounds = new google.maps.LatLngBounds(

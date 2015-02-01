@@ -19,9 +19,10 @@ padding: 0px;
 
 #info-box {
     width: 25%;
+    min-width: 300px;
     position: absolute;
-    right: 5%;
-    top: 25%;
+    right: 20px;
+    top: 20px;
     z-index: 1;
   }
 

@@ -25,7 +25,7 @@ function initialize() {
 
   map.data.addListener('click', function(event) {
       infowindow.setContent("<p>" + event.feature.getProperty('NAME') + "</p>");
-      infowindow.setPosition()
+      infowindow.setPosition(event.latLng.lat(), event.latLng.lng())
       infowindow.open(map);
   });
 

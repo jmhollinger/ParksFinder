@@ -16,14 +16,19 @@ function initialize() {
 
   map.data.loadGeoJson('data/parks.geojson')
 
-  var Green = {
+  var style1 = {
     fillColor: '#5cb85c',
     fillOpacity: 0.3,
     strokeColor: '#5cb85c',
     strokeWeight: 2
     };
-    
-  map.data.setStyle(Green);
+  
+  var infowindow = new google.maps.InfoWindow({
+  content:"<h3>Park Name</h3><p>Other Information</p>"
+  });
+
+  map.data.setStyle(style1);
+  map.data.addListener('click', function(event) {infowindow.open()});
 
   var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(37.921971, -84.663139),

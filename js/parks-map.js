@@ -25,8 +25,6 @@ function initialize() {
 
   map.data.addListener('click', function(event) {
       infowindow.setContent("Parks Information Goes Here!");
-      infowindow.setPosition(event.feature.getGeometry().get());
-      infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
       infowindow.open(map);
   });
 

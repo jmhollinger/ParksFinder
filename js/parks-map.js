@@ -3,6 +3,8 @@ function initialize() {
   var markers = [];
   var map = new google.maps.Map(document.getElementById('map-canvas'));
 
+  map.data.loadGeoJson('data/parks.geojson')
+
   var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(38.2203, -84.6654),
       new google.maps.LatLng(37.8341, -84.2788));

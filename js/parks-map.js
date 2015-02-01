@@ -16,6 +16,15 @@ function initialize() {
 
   map.data.loadGeoJson('data/parks.geojson')
 
+  var Green = {
+    fillColor: '#5cb85c',
+    fillOpacity: 0.3,
+    strokeColor: '#5cb85c',
+    strokeWeight: 2
+    };
+    
+  map.data.setStyle(Green);
+
   var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(37.921971, -84.663139),
       new google.maps.LatLng(38.155595, -84.334923)

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/custom.css">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,11 +26,40 @@
 
   <body>
   <div class="container-fluid">
-        <input id="pac-input" class="controls" type="text" placeholder="Type an address here.">
         <div id="map-canvas"></div>
-  </div>
+        <div id="info-box" class="panel panel-default">
+          <div class="panel-heading"><h1>Lexington Parks Finder</h1></div>
+          <div class="panel-body">
+          <div class="form-group">
+          <label class="control-label">Search for an Address</label>
+          <input id="pac-input" class="form-control" type="text" placeholder="Type an address here">
+          </div>
 
+           <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Parks
+              </label>
+            </div>
 
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Pools
+              </label>
+            </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Community Centers
+              </label>
+            </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Golf Courses
+              </label>
+            </div>
+          </div>
+          </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

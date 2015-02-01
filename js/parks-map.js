@@ -24,7 +24,8 @@ function initialize() {
   var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('click', function(event) {
-      infowindow.setContent("Parks Information Goes Here!");
+      infowindow.setContent("<p>" + event.feature.getProperty('NAME') + "</p>");
+      infowindow.setPosition()
       infowindow.open(map);
   });
 

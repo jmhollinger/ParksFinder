@@ -23,12 +23,15 @@ function initialize() {
     strokeWeight: 2
     };
   
-  var infowindow = new google.maps.InfoWindow({
-  content:"<h3>Park Name</h3><p>Other Information</p>"
-  });
+  var infowindow = new google.maps.InfoWindow();
 
+  map.data.addListener('click', function(event) {
+      infowindow.setContent("Parks Information Goes Here!");
+      infowindow.setPosition(event.feature.getGeometry().get());
+      infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+      infowindow.open(map);
+  }); 
   map.data.setStyle(style1);
-  map.data.addListener('click', function(event) {infowindow.open()});
 
   var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(37.921971, -84.663139),

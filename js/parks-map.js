@@ -24,8 +24,9 @@ function initialize() {
   var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('click', function(event) {
+      
       infowindow.setContent("<p>" + event.feature.getProperty('NAME') + "</p>");
-      infowindow.setPosition(event.latLng.lat(), event.latLng.lng())
+      infowindow.setPosition()
       infowindow.open(map);
   });
 

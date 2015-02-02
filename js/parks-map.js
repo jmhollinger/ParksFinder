@@ -15,9 +15,9 @@ function initialize(){
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var style1 = {
-    fillColor: '#339999',
+    fillColor: '#009966',
     fillOpacity: 0.3,
-    strokeColor: '#339999',
+    strokeColor: '#009966',
     strokeWeight: 2
     };
   

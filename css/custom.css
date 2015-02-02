@@ -26,6 +26,15 @@ padding: 0px;
     z-index: 1;
   }
 
+  #info-box .panel-heading, .panel-footer {
+    background-color: #339999;
+    color: #FFF;
+  }
+
+  #info-box .panel-heading h3,p{
+  margin: 0px
+  }
+
 .feature-list {
 list-style: none;
 margin: 1em 0px 0px 0px;

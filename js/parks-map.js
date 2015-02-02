@@ -15,9 +15,9 @@ function initialize() {
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var style1 = {
-    fillColor: '#5cb85c',
+    fillColor: '#339999',
     fillOpacity: 0.3,
-    strokeColor: '#5cb85c',
+    strokeColor: '#339999',
     strokeWeight: 2
     };
   
@@ -110,7 +110,7 @@ function initialize() {
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function ProperCase (input) {
-var bigwords = /\b(aka|llc|hvac|n\/c|^[b-df-hj-np-tv-z]{3,}|i|ii|iii|iv|v|vi|vii|viii|ix)\b/i;
+var bigwords = /\b(aka|llc|hvac|i|ii|iii|iv|v|vi|vii|viii|ix)\b/i;
 var smallwords = /\b(an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|to|vs)\b/i;
 return $.map(input.toLowerCase().split(' '), function( v, i ) {
 if (v.match(bigwords) !== null){return v.toUpperCase();} 

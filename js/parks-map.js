@@ -27,11 +27,11 @@ function initialize() {
       infowindow.setContent(
         '<p class="bold">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
         '<p>' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
-        '<ul>' + 
+        '<ul class="feature-list">' + 
         '<li><span class="bold">Basketball Courts:</span> 2</li>' +
         '<li><span class="bold">Tennis Courts:</span> 2</li>' +
         '<li><span class="bold">Walking Trails:</span> 1.2 Miles</li>' +
-        '<li><span class="bold">Shelters: Yes</span> 2</li>' +
+        '<li><span class="bold">Shelters:</span> Yes</li>' +
         '</ul>'
         );
       infowindow.setPosition(event.latLng)

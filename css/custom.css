@@ -26,8 +26,13 @@ padding: 0px;
     z-index: 1;
   }
 
-.bold
-{
+.bold{
 font-weight: bold;
 }
 
+.feature-list{
+list-style: none  
+}
+.feature-list li{
+margin: 0em 1em  
+}

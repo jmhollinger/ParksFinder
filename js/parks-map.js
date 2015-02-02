@@ -25,7 +25,7 @@ function initialize() {
 
   map.data.addListener('click', function(event) {
       infowindow.setContent(
-        '<p class="bold">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
+        '<h4 class="bold">' + ProperCase(event.feature.getProperty('NAME')) + '</h4>' +
         '<p>' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
         '<ul class="feature-list">' + 
         '<li><span class="bold">Basketball Courts:</span> 2</li>' +

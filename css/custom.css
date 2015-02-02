@@ -31,8 +31,11 @@ font-weight: bold;
 }
 
 .feature-list{
-list-style: none  
+list-style: none;
+margin: 0px;
+padding: 0px;  
 }
+
 .feature-list li{
-margin: 0em 1em  
+margin: 0px 1em  
 }

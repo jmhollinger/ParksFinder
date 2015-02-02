@@ -20,6 +20,8 @@ function initialize(){
     strokeColor: '#009966',
     strokeWeight: 2
     };
+
+  map.data.setStyle(style1);
   
   var infowindow = new google.maps.InfoWindow();
 
@@ -57,8 +59,6 @@ function initialize(){
   });
 
   map.data.loadGeoJson('data/parks-data.geojson')
-
-  map.data.setStyle(style1);
 
   var defaultBounds = new google.maps.LatLngBounds(
       new google.maps.LatLng(37.921971, -84.663139),
@@ -117,6 +117,8 @@ function initialize(){
   });
   // [END region_getplaces]
 
+
+
   // Bias the SearchBox results towards places that are within the bounds of the
   // current map's viewport.
   google.maps.event.addListener(map, 'bounds_changed', function() {
@@ -126,12 +128,3 @@ function initialize(){
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-function ProperCase (input) {
-var bigwords = /\b(aka|llc|hvac|i|ii|iii|iv|v|vi|vii|viii|ix)\b/i;
-var smallwords = /\b(an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|to|vs)\b/i;
-return $.map(input.toLowerCase().split(' '), function( v, i ) {
-if (v.match(bigwords) !== null){return v.toUpperCase();} 
-else if (v.match(smallwords) !== null){return v.toLowerCase();} 
-else {return v.replace(v.charAt(0),v.charAt(0).toUpperCase());}
-}).join(" ")};

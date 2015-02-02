@@ -41,7 +41,7 @@ function initialize(){
   
       
       if(event.feature.getProperty('shelter') === null ) {var shelter=""} 
-      else if(event.feature.getProperty('shelter') === 1) {var shelter='<li>' + event.feature.getProperty('shelter') + ' Shelter</li>'} 
+      else if(event.feature.getProperty('shelter') === "1") {var shelter='<li>' + event.feature.getProperty('shelter') + ' Shelter</li>'} 
       else {var shelter='<li>' + event.feature.getProperty('shelter') + ' Shelters</li>'}
       
       

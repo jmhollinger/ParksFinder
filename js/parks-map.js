@@ -41,16 +41,33 @@ function initialize(){
   
       
       if(event.feature.getProperty('shelter') === null ) {var shelter=""} 
-      else if(event.feature.getProperty('shelter') === "1") {var shelter='<li>' + event.feature.getProperty('shelter') + ' Shelter</li>'} 
-      else {var shelter='<li>' + event.feature.getProperty('shelter') + ' Shelters</li>'}
+        else if (event.feature.getProperty('shelter') === "1") {var shelter='<li>' + event.feature.getProperty('shelter') + ' Shelter</li>'} 
+        else {var shelter='<li>' + event.feature.getProperty('shelter') + ' Shelters</li>'}
       
       
-      if(event.feature.getProperty('basketball') === null ) {var basketball=""} else { var basketball='<li>Basketball Courts: ' + event.feature.getProperty('basketball') + '</li>'}
-      if(event.feature.getProperty('baseball') === null ) {var baseball=""} else {var baseball='<li>Baseball Fields: ' + event.feature.getProperty('baseball') + '</li>'}
-      if(event.feature.getProperty('tennis') === null ) {var tennis=""} else {var tennis='<li>Tennis Courts: ' + event.feature.getProperty('tennis') + '</li>'}
-      if(event.feature.getProperty('volleyball') === null ) {var volleyball=""} else {var volleyball='<li>Volleyball Courts: ' + event.feature.getProperty('volleyball') + '</li>'}
-      if(event.feature.getProperty('football') === null ) {var football=""} else {var football='<li>Football Fields: ' + event.feature.getProperty('football') + '</li>'}
-      if(event.feature.getProperty('horseshoes') === null ) {var horseshoes=""} else {var horseshoes='<li>Horseshoe Courts: ' + event.feature.getProperty('horseshoes') + '</li>'}  
+      if(event.feature.getProperty('basketball') === null ) {var basketball=""}
+        else if (event.feature.getProperty('basketball') === "1" ) {var basketball='<li>' + event.feature.getProperty('basketball') + ' Basketball Court</li>'}
+        else {var basketball='<li>' + event.feature.getProperty('basketball') + ' Basketball Courts</li>'}
+
+      if(event.feature.getProperty('baseball') === null ) {var baseball=""} 
+        else if (event.feature.getProperty('baseball') === "1" ) {var baseball='<li>' + event.feature.getProperty('baseball') + ' Baseball Field</li>'}
+        else {var baseball='<li>' + event.feature.getProperty('baseball') + ' Baseball Fields</li>'}
+      
+      if(event.feature.getProperty('tennis') === null ) {var tennis=""} 
+        else if(event.feature.getProperty('tennis') === "1" ) {var tennis='<li>' + event.feature.getProperty('tennis') + ' Tennis Court</li>'}
+        else {var tennis='<li>' + event.feature.getProperty('tennis') + ' Tennis Courts</li>'}
+      
+      if(event.feature.getProperty('volleyball') === null ) {var volleyball=""} 
+        else if(event.feature.getProperty('volleyball') === "1" ) {var volleyball='<li>' + event.feature.getProperty('volleyball') + ' Volleyball Court</li>'}
+        else {var volleyball='<li>' + event.feature.getProperty('volleyball') + ' Volleyball Courts</li>'}
+      
+      if(event.feature.getProperty('football') === null ) {var football=""} 
+        else if(event.feature.getProperty('football') === "1" ) {var football='<li>' + event.feature.getProperty('football') + ' Football Field</li>'}
+        else {var football='<li>' + event.feature.getProperty('football') + ' Football Fields</li>'}
+      
+      if(event.feature.getProperty('horseshoes') === null ) {var horseshoes=""} 
+        else if(event.feature.getProperty('horseshoes') === "1" ) var horseshoes='<li>' + event.feature.getProperty('horseshoes') + ' Horseshoe Court</li>'}  
+        else {var horseshoes='<li>' + event.feature.getProperty('horseshoes') + ' Horseshoe Courts</li>'}  
 
       infowindow.setContent(
         '<div class="infowindow"><p class="park-name">' + event.feature.getProperty('name') + '</p>' +

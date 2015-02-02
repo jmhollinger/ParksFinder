@@ -23,14 +23,10 @@ function initialize() {
   
   var infowindow = new google.maps.InfoWindow();
 
-  map.data.addListener('mouseover', function(event) {
+  map.data.addListener('click', function(event) {
       infowindow.setContent("<p>" + event.feature.getProperty('NAME') + "</p>");
       infowindow.setPosition(event.latLng)
       infowindow.open(map);
-  });
-
-  map.data.addListener('mouseout', function(event) {
-      infowindow.close(map);
   });
 
   map.data.loadGeoJson('data/parks.geojson')

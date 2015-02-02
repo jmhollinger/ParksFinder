@@ -48,7 +48,7 @@ function initialize(){
         '<p class="park-address">' + event.feature.getProperty('address') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('acres') + ' Acres</p>' +
         '<ul class="feature-list">' + pavedtrails + swimming + golf + playground + dogpark + discgolf + center + bldg + openfields + restroom + 
-        shelters + baseball + basketball + football + horseshoes + tennis + volleyball + 
+        shelter + baseball + basketball + football + horseshoes + tennis + volleyball + 
         '</ul>'
         );
       infowindow.setPosition(event.latLng)

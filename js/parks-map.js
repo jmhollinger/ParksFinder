@@ -27,7 +27,7 @@ function initialize(){
       
       if(event.feature.getProperty('center') === null ) {var center=""} else { var center='<li>Community Center</li>'}
       if(event.feature.getProperty('discgolf') === null ) {var discgolf=""} else { var discgolf='<li>Disc Golf</li>'}
-      if(event.feature.getProperty('dogpark') === null ) {var dogpark=""} else { var discgolf='<li>Dog Park</li>'}
+      if(event.feature.getProperty('dogpark') === null ) {var dogpark=""} else { var dogpark='<li>Dog Park</li>'}
       if(event.feature.getProperty('golf') === null ) {var golf=""} else { var golf='<li>Golf Course</li>'}
       if(event.feature.getProperty('bldg') === null ) {var bldg=""} else { var bldg='<li>Neighborhood Building</li>'}
       if(event.feature.getProperty('openfields') === null ) {var openfields=""} else { var openfields='<li>Open Fields</li>'}
@@ -44,12 +44,12 @@ function initialize(){
       if(event.feature.getProperty('horseshoes') === null ) {var horseshoes=""} else {var horseshoes='<li>Horseshoe Courts: ' + event.feature.getProperty('horseshoes') + '</li>'}  
 
       infowindow.setContent(
-        '<p class="park-name">' + event.feature.getProperty('name') + '</p>' +
+        '<div class="infowindow"><p class="park-name">' + event.feature.getProperty('name') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('address') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('acres') + ' Acres</p>' +
         '<ul class="feature-list">' + pavedtrails + swimming + golf + playground + dogpark + discgolf + center + bldg + openfields + restroom + 
         shelter + baseball + basketball + football + horseshoes + tennis + volleyball + 
-        '</ul>'
+        '</ul></div>'
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);

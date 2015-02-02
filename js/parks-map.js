@@ -64,8 +64,8 @@ function initialize(){
         else {var volleyball='<li>' + event.feature.getProperty('volleyball') + ' Volleyball Courts</li>'}
       
       if(event.feature.getProperty('football') === null ) {var football=""} 
-        else if(event.feature.getProperty('football') == "1" ) {var football='<li>' + event.feature.getProperty('football') + ' Football Field</li>'}
-        else {var football='<li>' + event.feature.getProperty('football') + ' Football Fields</li>'}
+        else if(event.feature.getProperty('football') == "1" ) {var football='<li>' + event.feature.getProperty('football') + ' Football/Soccer Field</li>'}
+        else {var football='<li>' + event.feature.getProperty('football') + ' Football/Soccer Fields</li>'}
       
       if(event.feature.getProperty('horseshoes') === null ) {var horseshoes=""} 
         else if(event.feature.getProperty('horseshoes') == "1" ) {var horseshoes='<li>' + event.feature.getProperty('horseshoes') + ' Horseshoe Court</li>'}  

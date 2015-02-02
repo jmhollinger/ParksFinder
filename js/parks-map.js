@@ -23,10 +23,10 @@ function initialize() {
   
   var infowindow = new google.maps.InfoWindow();
 
-  map.data.addListener('click', function(event) {
+  map.data.addListener('mouseover', function(event) {
       
       infowindow.setContent("<p>" + event.feature.getProperty('NAME') + "</p>");
-      infowindow.setPosition()
+      infowindow.setPosition(event.latLng)
       infowindow.open(map);
   });
 

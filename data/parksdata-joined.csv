@@ -33,7 +33,7 @@ GISID,type,name,address,acres,baseball,basketball,center,discgolf,dogpark,footba
 31,Park,Dixie Park,1850 Eastland Pkwy,8.6,,,,X,,,,,,,,X,,,,,
 32,Park,Model Airplane Facility,4200 Hedger Ln,8.69,,,,,,,,,,,,,,,,,
 33,Park,Garden Springs Park,2005 Dogwood Dr,7.26,1,1,,,,,,,,,0.5,,X,1,,,1
-34,Park,Cheapside,251 West Main St,1,,,,,,,,,,,,,,X,,,
+34,Park,Cheapside,251 West Main St,1,,,,,,,,,,,,,,1,,,
 35,Park,Gratz Park,250 West Third St,2.1,,,,,,,,,,X,,,,,,,
 36,Park,Woodhill Park,457 Larkwood Dr,10.4,1,1,,,,1,,,X,X,,X,X,1,,,
 37,Park,Donaldson Park,9790 Tates Creek Rd,0.6,,,,,,,,,,,,,,,,,
@@ -70,7 +70,7 @@ GISID,type,name,address,acres,baseball,basketball,center,discgolf,dogpark,footba
 68,Park,Woodward Heights Park,651 W. High St,1.4,,,,,,,,,,X,,,,,,,
 69,Park,Higbee Mill Park,1421 Higbee Mill Rd,8.06,,,,,,1,,,,X,0.5,,,,,,
 70,Park,Martin Luther King Park,1625 McCullough Dr,37.6,1,1,,,,2,,,X,X,0.6,X,X,1,,2,1
-71,Park,Masterson Station Park,3051 Leestown Rd,659.75,,,,,X,20,,1,X,X,0.5,X,,3,,,X
+71,Park,Masterson Station Park,3051 Leestown Rd,659.75,,,,,X,20,,1,X,X,0.5,X,,3,,,1
 72,Park,Woodland Park,601 E High St,19.4,1,1,,,,,,2,,X,,X,X,2,X,4,
 73,Park,Ecton Park,956 Turkey Foot Rd,11.4,2,1,,,,,,,,X,,X,X,1,,4,
 74,Park,Oakwood Park,1050 Briarwood Dr,10.9,1,1,,,,,,,X,,,X,X,1,,,
@@ -82,7 +82,7 @@ GISID,type,name,address,acres,baseball,basketball,center,discgolf,dogpark,footba
 80,Park,The Arboretum,500 Alumni Dr.,99.44,,,,,,,,,,X,2,,,,,,
 81,Park,Mount Tabor Park,550 Elk Lake Dr,13.2,1,1,,,,5,,,,X,0.4,X,,1,,2,
 82,Park,Clemens Park,1960 Old Higbee Mill Rd,8.13,,,,,,,,,,,,,,,,,
-83,Park,Dogwood Park,2393 Dogwood Trace Blvd,18.61,,,,,,,,,,X,0.6,X,,X,,,
+83,Park,Dogwood Park,2393 Dogwood Trace Blvd,18.61,,,,,,,,,,X,0.6,X,,1,,,
 84,Park,Waverly Park,4244 Southmoor Pk,11.13,,1,,,,1,,,,X,0.7,X,,1,,2,
 85,Park,Harrods Hill Park,3308 Ridgecane Rd,12.57,,1,,,,5,,,,X,0.5,X,,1,,,
 86,Park,Southpoint Park,4496 Graves Dr,13,,,,,,,,,,X,0.5,X,,,,,

@@ -25,9 +25,14 @@ function initialize() {
 
   map.data.addListener('click', function(event) {
       infowindow.setContent(
-        '<p class="Feature Title">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
+        '<p class="bold">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
         '<p>' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
-        '<p>' + 'Parks amenities will go here...' + '</p>'
+        '<ul>' + 
+        '<li><span class="bold">Basketball Courts:</span> 2</li>' +
+        '<li><span class="bold">Tennis Courts:</span> 2</li>' +
+        '<li><span class="bold">Walking Trails:</span> 1.2 Miles</li>' +
+        '<li><span class="bold">Shelters: Yes</span> 2</li>' +
+        '</ul>'
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);

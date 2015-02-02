@@ -26,9 +26,8 @@ padding: 0px;
     z-index: 1;
   }
 
-.parks-heading
+.bold
 {
-background-color: blue;
-color: white;
+font-weight: bold;
 }
 

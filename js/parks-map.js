@@ -33,7 +33,8 @@ function initialize(){
       if(event.feature.getProperty('openfields') === null ) {var openfields=""} else { var openfields='<li>Open Fields</li>'}
       if(event.feature.getProperty('playground') === null ) {var playground=""} else { var playground='<li>Playground</li>'}
       if(event.feature.getProperty('restroom') === null ) {var restroom=""} else { var restroom='<li>Restrooms</li>'}
-      if(event.feature.getProperty('swimming') === null ) {var swimming=""} else { var swimming='<li>Swimming Pool</li>'} 
+      if(event.feature.getProperty('swimming') === null ) {var swimming=""} else { var swimming='<li>Swimming Pool</li>'}
+
       if(event.feature.getProperty('basketball') === null ) {var basketball=""} else { var basketball='<li>Basketball Courts: ' + event.feature.getProperty('basketball') + '</li>'}
       if(event.feature.getProperty('baseball') === null ) {var baseball=""} else {var baseball='<li>Baseball Fields: ' + event.feature.getProperty('baseball') + '</li>'}
       if(event.feature.getProperty('tennis') === null ) {var tennis=""} else {var tennis='<li>Tennis Courts: ' + event.feature.getProperty('tennis') + '</li>'}
@@ -46,10 +47,10 @@ function initialize(){
       infowindow.setContent(
         '<div class="infowindow"><p class="park-name">' + event.feature.getProperty('name') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('address') + '</p>' +
-        '<p class="park-address">' + event.feature.getProperty('acres') + ' Acres</p>' +
-        '<ul class="feature-list">' + pavedtrails + swimming + golf + playground + dogpark + discgolf + center + bldg + openfields + restroom + 
-        shelter + baseball + basketball + football + horseshoes + tennis + volleyball + 
-        '</ul></div>'
+        '<ul class="feature-list"><li>' + event.feature.getProperty('acres') + ' Acres</li></ul>' +
+        '<ul class="feature-list">' + pavedtrails + swimming + golf + playground + dogpark + discgolf + center + bldg + openfields + restroom + '</ul>' +
+        '<ul class="feature-list">' + shelter + '</ul>' +
+        '<ul class="feature-list">' + baseball + basketball + football + horseshoes + tennis + volleyball +'</ul></div>'
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);

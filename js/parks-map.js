@@ -27,7 +27,7 @@ function initialize() {
       infowindow.setContent(
         '<p class="Feature Title">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
         '<p>' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
-        '<p>' + '(Parks amenities will go here...' + '</p>' +
+        '<p>' + 'Parks amenities will go here...' + '</p>' +
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);

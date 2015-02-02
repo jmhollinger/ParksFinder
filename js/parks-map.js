@@ -66,7 +66,7 @@ function initialize(){
         else {var football='<li>' + event.feature.getProperty('football') + ' Football Fields</li>'}
       
       if(event.feature.getProperty('horseshoes') === null ) {var horseshoes=""} 
-        else if(event.feature.getProperty('horseshoes') === "1" ) var horseshoes='<li>' + event.feature.getProperty('horseshoes') + ' Horseshoe Court</li>'}  
+        else if(event.feature.getProperty('horseshoes') === "1" ) {var horseshoes='<li>' + event.feature.getProperty('horseshoes') + ' Horseshoe Court</li>'}  
         else {var horseshoes='<li>' + event.feature.getProperty('horseshoes') + ' Horseshoe Courts</li>'}  
 
       infowindow.setContent(

@@ -25,20 +25,20 @@ function initialize(){
 
   map.data.addListener('click', function(event) {
       infowindow.setContent(
-        '<p class="park-name">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
-        '<p class="park-address">' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
+        '<p class="park-name">' + event.feature.getProperty('name')) + '</p>' +
+        '<p class="park-address">' + event.feature.getProperty('address')) + '</p>' +
         '<ul class="feature-list">' +
-        '<li>2 Basketball Courts</li>' +
-        '<li>2 Tennis Courts</li>' +
-        '<li>1.2 Miles of Walking Trails</li>' +
-        '<li>Park Shelters</li>' +
+        '<li>Basketball Courts:' + event.feature.getProperty('basketball')) + '</li>' +
+        '<li>Tennis Courts:' + event.feature.getProperty('tennis')) + '</li>' +
+        '<li>Miles of Walking Trails:' + event.feature.getProperty('pavedtrails')) + '</li>' +
+        '<li>Park Shelters:' + event.feature.getProperty('shelter')) + '</li>' +
         '</ul>'
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);
   });
 
-  map.data.loadGeoJson('data/parks.geojson')
+  map.data.loadGeoJson('data/parks-data.geojson')
 
   map.data.setStyle(style1);
 

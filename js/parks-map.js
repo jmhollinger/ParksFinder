@@ -24,11 +24,14 @@ function initialize(){
   var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('click', function(event) {
+      
+      if(event.feature.getProperty('basketball') === null ) {var basketball=""} else {var basketball='<li>Basketball Courts:' + event.feature.getProperty('basketball') + '</li>'}
+
       infowindow.setContent(
         '<p class="park-name">' + event.feature.getProperty('name') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('address') + '</p>' +
         '<ul class="feature-list">' +
-        if(event.feature.getProperty('basketball') === null ) {} else {'<li>Basketball Courts:' + event.feature.getProperty('basketball') + '</li>'} +
+        basketball +
         '<li>Tennis Courts:' + event.feature.getProperty('tennis') + '</li>' +
         '<li>Miles of Walking Trails:' + event.feature.getProperty('pavedtrails') + '</li>' +
         '<li>Park Shelters:' + event.feature.getProperty('shelter') + '</li>' +

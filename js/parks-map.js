@@ -73,8 +73,8 @@ function initialize(){
         '<div class="infowindow"><p class="park-name">' + event.feature.getProperty('name') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('address') + '</p>' +
         '<ul class="feature-list"><li>' + event.feature.getProperty('acres') + ' Acres</li></ul>' +
-        '<ul class="feature-list">' + pavedtrails + swimming + golf + playground + dogpark + discgolf + center + bldg + openfields + restroom + shelter + '</ul>' +
-        '<ul class="feature-list">' + baseball + basketball + football + horseshoes + tennis + volleyball +'</ul></div>'
+        '<ul class="feature-list">' + pavedtrails + swimming + golf + playground + dogpark + discgolf + center + bldg + openfields + restroom + shelter + 
+        baseball + basketball + football + horseshoes + tennis + volleyball +'</ul></div>'
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);

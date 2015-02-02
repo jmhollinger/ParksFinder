@@ -26,16 +26,14 @@ function initialize(){
   map.data.addListener('click', function(event) {
       
       if(event.feature.getProperty('basketball') === null ) {var basketball=""} else {var basketball='<li>Basketball Courts:' + event.feature.getProperty('basketball') + '</li>'}
-
+      if(event.feature.getProperty('baseball') === null ) {var baseball=""} else {var baseball='<li>Baseball Fields:' + event.feature.getProperty('baseball') + '</li>'}
+      if(event.feature.getProperty('tennis') === null ) {var tennis=""} else {var tennis='<li>Tennis Courts:' + event.feature.getProperty('tennis') + '</li>'}
+      if(event.feature.getProperty('volleyball') === null ) {var volleyball=""} else {var volleyball='<li>Volleyball Courts:' + event.feature.getProperty('volleyball') + '</li>'}
+      if(event.feature.getProperty('shelter') === null ) {var shelter=""} else {var shelter='<li>Shelters:' + event.feature.getProperty('shelter') + '</li>'}  
       infowindow.setContent(
         '<p class="park-name">' + event.feature.getProperty('name') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('address') + '</p>' +
-        '<ul class="feature-list">' +
-        basketball +
-        '<li>Tennis Courts:' + event.feature.getProperty('tennis') + '</li>' +
-        '<li>Miles of Walking Trails:' + event.feature.getProperty('pavedtrails') + '</li>' +
-        '<li>Park Shelters:' + event.feature.getProperty('shelter') + '</li>' +
-        '</ul>'
+        '<ul class="feature-list">' + basketball + baseball + tennis + volleyball + shelter + '</ul>'
         );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);

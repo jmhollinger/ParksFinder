@@ -6,10 +6,10 @@ function initialize() {
     overviewMapControl:true,
     rotateControl:true,
     scaleControl:true,
-      mapTypeControl: true,
-      mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR, position:google.maps.ControlPosition.BOTTOM_CENTER},
-      zoomControl: true,
-      zoomControlOptions: {style: google.maps.ZoomControlStyle.DEFAULT}
+    mapTypeControl: true,
+    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR, position:google.maps.ControlPosition.TOP_CENTER},
+    zoomControl: true,
+    zoomControlOptions: {style: google.maps.ZoomControlStyle.DEFAULT}
     };
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);

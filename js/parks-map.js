@@ -27,6 +27,8 @@ function initialize(){
 
   map.data.addListener('click', function(event) {
       
+      if(event.feature.getProperty('acres') == "1" ) {var acres='<li>' + event.feature.getProperty('acres') + ' Acre</li>'} else {var acres='<li>' + event.feature.getProperty('acres') + ' Acres</li>'} 
+
       if(event.feature.getProperty('pavedtrails') === null ) {var pavedtrails=""} else {var pavedtrails='<li>' + event.feature.getProperty('pavedtrails') + ' Miles of Paved Trails</li>'} 
       if(event.feature.getProperty('center') === null ) {var center=""} else { var center='<li>Community Center</li>'}
       if(event.feature.getProperty('discgolf') === null ) {var discgolf=""} else { var discgolf='<li>Disc Golf</li>'}
@@ -72,7 +74,7 @@ function initialize(){
       infowindow.setContent(
         '<div class="infowindow"><p class="park-name">' + event.feature.getProperty('name') + '</p>' +
         '<p class="park-address">' + event.feature.getProperty('address') + '</p>' +
-        '<ul class="feature-list"><li>' + event.feature.getProperty('acres') + ' Acres</li></ul>' +
+        '<ul class="feature-list">' + acres + '</ul>' +
         '<ul class="feature-list">' + pavedtrails + swimming + golf + playground + dogpark + discgolf + center + bldg + openfields + restroom + shelter + 
         baseball + basketball + football + horseshoes + tennis + volleyball +'</ul></div>'
         );

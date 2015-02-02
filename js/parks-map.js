@@ -24,7 +24,11 @@ function initialize() {
   var infowindow = new google.maps.InfoWindow();
 
   map.data.addListener('click', function(event) {
-      infowindow.setContent("<p>" + event.feature.getProperty('NAME') + "</p>");
+      infowindow.setContent(
+        '<p class="Feature Title">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
+        '<p>' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
+        '<p>' + '(Parks amenities will go here...' + '</p>' +
+        );
       infowindow.setPosition(event.latLng)
       infowindow.open(map);
   });
@@ -99,3 +103,12 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+function ProperCase (input) {
+var bigwords = /\b(aka|llc|hvac|n\/c|^[b-df-hj-np-tv-z]{3,}|i|ii|iii|iv|v|vi|vii|viii|ix)\b/i;
+var smallwords = /\b(an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|to|vs)\b/i;
+return $.map(input.toLowerCase().split(' '), function( v, i ) {
+if (v.match(bigwords) !== null){return v.toUpperCase();} 
+else if (v.match(smallwords) !== null){return v.toLowerCase();} 
+else {return v.replace(v.charAt(0),v.charAt(0).toUpperCase());}
+}).join(" ")};

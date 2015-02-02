@@ -25,13 +25,13 @@ function initialize() {
 
   map.data.addListener('click', function(event) {
       infowindow.setContent(
-        '<h4 class="bold">' + ProperCase(event.feature.getProperty('NAME')) + '</h4>' +
-        '<p>' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
-        '<ul class="feature-list">' + 
-        '<li><span class="bold">Basketball Courts:</span> 2</li>' +
-        '<li><span class="bold">Tennis Courts:</span> 2</li>' +
-        '<li><span class="bold">Walking Trails:</span> 1.2 Miles</li>' +
-        '<li><span class="bold">Shelters:</span> Yes</li>' +
+        '<p class="park-name">' + ProperCase(event.feature.getProperty('NAME')) + '</p>' +
+        '<p class="park-address">' + ProperCase(event.feature.getProperty('ADDRESS')) + '</p>' +
+        '<ul class="feature-list">' +
+        '<li>2 Basketball Courts</li>' +
+        '<li>2 Tennis Courts</li>' +
+        '<li>1.2 Miles of Walking Trails</li>' +
+        '<li>Park Shelters</li>' +
         '</ul>'
         );
       infowindow.setPosition(event.latLng)

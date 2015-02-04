@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
-    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/custom.css">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -26,18 +26,136 @@
 
   <body>
   <div class="container-fluid">
-        <input id="pac-input" class="controls" type="text" placeholder="Type an address here.">
-        <div id="map-canvas"></div>
+          <div id="info-box" class="panel panel-default hidden-xs">
+          <div class="panel-heading">
+            <h3><span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span> ParksFinder</h3>
+            <p class="subtitle">City of Lexington</p>
+          </div>
+          <div class="panel-body collapse in" id="search-filter">
+          <div class="form-group">
+          <label class="control-label">Search for an Address</label>
+          <input id="pac-input" class="form-control" type="text" placeholder="Type an address here">
+          </div>
+          
+          <div class="row">
+          <div class="col-sm-6">  
+           <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Paved Trails
+              </label>
+            </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Pools
+              </label>
+            </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Golf Courses
+              </label>
+            </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Playgrounds
+              </label>
+             </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Dog Parks
+              </label>
+             </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Disc Golf
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Community Centers
+              </label>
+            </div>
+
+             <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Neighborhood Buildings
+              </label>
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Restrooms
+              </label>
+            </div>
+            </div>
+            <div class="col-sm-6">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Open Fields
+              </label>
+            </div>
+
+                        <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Shelters
+              </label>
+            </div>
+
+                        <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Baseball Fields
+              </label>
+            </div>
+
+                        <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Basketball Courts
+              </label>
+            </div>
+
+                        <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Football/Soccer Fields
+              </label>
+            </div>
+
+                        <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Horseshoe Courts
+              </label>
+            </div>
+
+                        <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Tennis Courts
+              </label>
+            </div>
+
+                        <div class="checkbox">
+              <label>
+                <input type="checkbox" checked="true"> Volleyball Courts
+              </label>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="panel-footer">
+            <button class="btn btn-default center-block" type="button" data-toggle="collapse" data-target="#search-filter" aria-expanded="true" aria-controls="search-filter">Show/Hide</button>
+          </div>
+      </div>
+      <div id="map-canvas"></div>
   </div>
-
-
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places"</script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXqhUx3ZQwPBtAVsXg6tz9N_2yvrRydcQ"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXqhUx3ZQwPBtAVsXg6tz9N_2yvrRydcQ&sensor=true&libraries=places"></script>
     <script src="js/parks-map.js"></script>
   </body>
 </html>
